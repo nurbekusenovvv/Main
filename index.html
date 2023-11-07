@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Главная страница</title>
+</head>
+<body>
+    <h1>Добро пожаловать на главную страницу!</h1>
+
+    <form method="post" action="{% url 'car_form_submit' %}">
+        {% csrf_token %}
+        <label for="car_make">Марка автомобиля:</label>
+        <input type="text" id="car_make" name="car_make" required>
+        <br>
+        <input type="submit" value="Отправить">
+    </form>
+</body>
+</html>
